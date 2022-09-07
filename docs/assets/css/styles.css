@@ -39,6 +39,85 @@
 }
 
 
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     background-color: #FFFFFF;
     color: #262b33;
@@ -115,13 +194,12 @@ body {
 
 .content__column {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 120px;
 }
 
 .lang__column{
     margin-top: 22px;
-
 }
 
 .resume-page__head {
@@ -284,4 +362,100 @@ ul.dash > li:before {
 
 .soc-block a img {
     transition: 0.7s;
+}
+
+.main__content {
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        height: 100px;
+    }
+
+    .resume-container {
+        display: flex;
+        margin-top: -60px;
+    }
+
+    .resume-page {
+        margin: auto 20px;
+        width: 100%;
+    }
+
+    .resume-page__content {
+        padding: 30px;
+    }
+
+    .resume-page__head__contacts {
+        font-size: 24px;
+    }
+
+    .footer__link {
+        justify-content: center;
+    }
+
+    .main__content, .side__content {
+        width: 100%;
+    }
+
+    .side__content .skills__column {
+        margin-top: 40px;
+    }
+
+    .side__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .lang__column {
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .resume-page__head__contacts {
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .lang__column {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .resume-page__head {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .resume-page__head__contacts {
+        font-size: 18px;
+    }
+
+    .introduction {
+        font-size: 24px;
+    }
+
+    .skills {
+        flex-wrap: wrap;
+    }
+
+    .skills .right__column {
+        width: 100%;
+        margin-left: 0;
+    }
 }
