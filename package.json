@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --cors --no-browser --no-css-inject "
+    "start": "live-server --cors --no-browser --no-css-inject ./docs"
   },
   "author": "",
   "license": "ISC",
