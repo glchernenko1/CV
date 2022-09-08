@@ -236,6 +236,19 @@ body {
     line-height: 32px;
 }
 
+.telegram_link {
+    font-size: 16px;
+    text-align: right;
+    line-height: 32px;
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+.telegram_link:hover {
+    opacity: 0.5;
+    transition: 0.7s;
+}
+
 
 .introduction {
     margin-top: 40px;
