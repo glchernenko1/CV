@@ -404,6 +404,10 @@ ul.dash > li:before {
         font-size: 24px;
     }
 
+    .telegram_link{
+        font-size: 24px;
+    }
+
     .footer__link {
         justify-content: center;
     }
@@ -456,6 +460,10 @@ ul.dash > li:before {
     }
 
     .resume-page__head__contacts {
+        font-size: 18px;
+    }
+
+    .telegram_link{
         font-size: 18px;
     }
 
