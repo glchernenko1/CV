@@ -249,6 +249,17 @@ body {
     transition: 0.7s;
 }
 
+.src_link {
+    text-align: right;
+    line-height: 32px;
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+.src_link:hover {
+    opacity: 0.5;
+    transition: 0.7s;
+}
 
 .introduction {
     margin-top: 40px;
